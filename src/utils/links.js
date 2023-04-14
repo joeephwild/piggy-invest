@@ -13,7 +13,7 @@ export const link = [
     },
     {
       title: "Savings",
-      links: "/",
+      links: "/savings",
       icon: MdEnergySavingsLeaf,
       active: "savings",
       size: 25

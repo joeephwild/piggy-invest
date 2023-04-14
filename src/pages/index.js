@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import SideBar from "@/components/SideBar";
 import Header from "@/components/Header";
 import SavingsCard from "@/components/SavingsCard";
+import TransactionDetails from "@/components/TransactionDetails";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,11 @@ export default function Home() {
             <SavingsCard />
             <SavingsCard />
             <SavingsCard />
+          </div>
+
+          {/* transactions */}
+          <div className="mx-[40px] mt-16">
+            <TransactionDetails />
           </div>
         </div>
       </main>

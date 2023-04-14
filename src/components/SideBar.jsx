@@ -33,10 +33,10 @@ const SideBar = () => {
                   active !== item.active ? "text-[#6C757D]" : "text-[#ffffff]"
                 }
               >
-                <item.icon size={34}/>
+                <item.icon size={30}/>
               </div>
               <h3  className={
-                  active !== item.active ? "text-[#6C757D] font-bold text-[24px] leading-[29px]" : "font-bold text-[24px] leading-[29px] text-[#ffffff]"
+                  active !== item.active ? "text-[#6C757D] font-bold text-[20px] leading-[29px]" : "font-bold text-[24px] leading-[29px] text-[#ffffff]"
                 }>
                 {item.title}
               </h3>

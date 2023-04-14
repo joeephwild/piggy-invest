@@ -6,7 +6,7 @@ import {AiTwotoneHome} from 'react-icons/ai'
 export const link = [
     {
       title: "Home",
-      links: "/",
+      links: "/" || "/home",
       icon: AiTwotoneHome,
       active: "home",
       size: 20

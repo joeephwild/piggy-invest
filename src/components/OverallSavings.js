@@ -1,7 +1,7 @@
 import React from "react";
 import {GoTriangleUp} from 'react-icons/go'
 
-const SavingsCard = ({ title, value }) => {
+const OverallSavings = ({ title, value }) => {
   return (
     <div className="max-w-[23vw] relative max-h-[200px] bg-gradient-to-r from-[#FFFFFF] to-[#DADEE8] shadow-md py-3 px-4.5 rounded">
       <div className="h-[80px] w-[80px] bg-[#B3BBCF]/50 bg-blend-overlay absolute right-6 top-0 z-[99] rounded-full" />
@@ -24,4 +24,4 @@ const SavingsCard = ({ title, value }) => {
   );
 };
 
-export default SavingsCard;
+export default OverallSavings;

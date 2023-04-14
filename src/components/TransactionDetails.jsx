@@ -11,7 +11,7 @@ export default function TransactionDetails() {
                     <MdArrowForwardIos size={25} color='#FF7034' />
                 </div>
             </div>
-            <div className='min-h-[280px] bg-[#000] mt-8 rounded'>
+            <div className='min-h-[40vh] bg-[#000] mt-8 rounded'>
 
             </div>
         </div>

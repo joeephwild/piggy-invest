@@ -15,9 +15,9 @@ export default function Home() {
       <Layout>
         <Meta page='Home' />
           <div className="grid grid-cols-3 mx-[40px] mt-16 items-center gap-5">
-              <SavingsCard />
-              <SavingsCard />
-              <SavingsCard />
+              <SavingsCard title='Savings' value='$2,000' />
+              <SavingsCard title='Investments' value='$2,000' />
+              <SavingsCard title='Rewards' value='$2,000' />
           </div>
 
           {/* transactions */}

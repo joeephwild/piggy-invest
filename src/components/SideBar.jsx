@@ -2,11 +2,25 @@ import { logo } from "@/images";
 import { link } from "@/utils/links";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 import { IoPersonCircleSharp } from 'react-icons/io'
 
 const SideBar = () => {
   const [active, setActive] = useState("home");
+
+  const { asPath } = useRouter()
+  console.log(active)
+  useEffect(() => {
+
+    if(asPath === '/') {
+      setActive('home')
+    } else {
+      setActive(asPath.slice(1))
+    }
+    
+  }, [])
+
   return (
     <div className="w-[17%] px-[46px] py-[30px] bg-[#0A2463] h-screen">
       {/**logo section */}

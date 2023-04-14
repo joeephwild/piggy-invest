@@ -1,14 +1,32 @@
-import { logo } from "@/images";
+import { logo, profile } from "@/images";
 import { link } from "@/utils/links";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
-import { IoPersonCircleSharp } from 'react-icons/io'
+import React, { useEffect, useState } from "react";
+import { IoPersonCircle } from 'react-icons/io'
 
 const SideBar = () => {
-  const [active, setActive] = useState("home");
+  
+  const [active, setActive] = useState();
+  useEffect(() => {
+    let currentWin = window.location.href.substring(22);
+    let currentTab;
+    if (currentWin === "") {
+      currentTab = "home";
+    } else if (currentWin === "savings") {
+      currentTab = "savings";
+    } else if (currentWin === "investment") {
+      currentTab = "investment";
+    } else if (currentWin === "reward") {
+      currentTab = "reward";
+    } else if (currentWin === "swap") {
+      currentTab = "swap";
+    }
+    setActive(currentTab)
+  },[])
+
   return (
-    <div className="w-[17%] px-[46px] py-[30px] bg-[#0A2463] h-screen">
+    <div className="w-[310px] px-[46px] py-[30px] bg-[#0A2463] h-screen">
       {/**logo section */}
       <div className="flex items-center space-x-2">
         <Image
@@ -46,8 +64,9 @@ const SideBar = () => {
       </div>
 
       {/** profile */}
-      <div className="flex items-center space-x-4 cursor-pointer">
-    
+      <div className="flex fixed bottom-24 items-center space-x-4 cursor-pointer">
+        <Image src={profile} alt='profile' width="33px" height="33px" />
+        <h4 className="font-bold text-[24px] text-[#ffffff] leading-[29px]">Account</h4>
       </div>
     </div>
   );

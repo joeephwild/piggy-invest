@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import SideBar from "@/components/SideBar";
 import Header from "@/components/Header";
 import SavingsCard from "@/components/SavingsCard";
+import { AiFillQuestionCircle } from "react-icons/ai";
+import Transactions from "@/components/Transactions";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +29,12 @@ export default function Home() {
             <SavingsCard />
             <SavingsCard />
           </div>
+           
+           {/** transactions */}
+           <Transactions />
+          <div className='fixed right-16 bottom-20'>
+        <AiFillQuestionCircle size={60} color='#6C757D' />
+        </div>
         </div>
       </main>
     </>
